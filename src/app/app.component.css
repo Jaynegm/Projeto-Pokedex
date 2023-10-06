@@ -1,15 +1,25 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Raleway:wght@300&family=Roboto:wght@300&family=Young+Serif&display=swap');
 
-
 nav{
     display:flex;
     justify-content: space-around;
     align-items: center;
+    background-color: white;
+}
+
+main {
+  min-height: 100vh; 
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 48px;
 }
 
 .logo {
-    width: 200px; /* Altere a largura desejada para tornar a logo maior */
+    width: 200px; 
     height: auto;
     display: flex;
     flex-direction: row;
@@ -22,32 +32,19 @@ nav{
     height: 56px;
 }
 
-ul,li{
-    display: inline-block;
-    margin-left: 1rem;
-    color: #406bd4;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    cursor: pointer;
-}
 
-.link_selecionado{
-    color:#406bd4;
-    border-bottom: 2px solid #3764d3;
-    padding-bottom: 5px;
-}
-
-
-.search{
-    width: 80%;
-    margin: 0 auto;
-    height: 40px;
-    border-radius: 8px;
-    border:2px solid black;
-    display: flex;
-    justify-content: space-between;
-    padding: 4px;
-    gap:8px;
-    align-items: center;
+.search {
+  width: 80%;
+  margin: 50px auto; 
+  height: 40px;
+  border-radius: 8px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+  padding: 6px;
+  gap: 8px;
+  align-items: center;
+  background-color: white;
 }
 
 .inputPrincipal{
@@ -76,28 +73,6 @@ main{
     padding-top: 48px;
 }
 
-form{
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-
-select{
-    width: 180px;
-    height: auto;
-    padding: 10px;
-    border: 2px solid #3764d3;
-    border-radius: 4px;
-}
-
-label{
-    display:flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-bottom: 4px;
-}
-
 h3{
     color:black;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -110,15 +85,36 @@ h2{
     font-size: 1.5rem;
 }
 
-  
 .cardPokemon{
-    padding: 16px;
+    padding: 30px;
     border: 2px solid black;
     border-radius: 8px;
-    margin: 0 10px 20px 10px; /* Margem horizontal igual em todos os lados, com espaçamento inferior */
-    width: calc(25% - 20px); /* Configure a largura para ocupar 25% da largura total com margens */
+    margin:52px;  
     box-sizing: border-box;
-    flex-grow: 0; /* Evita que os cards expandam igualmente para preencher a linha */
+    flex-grow: 0;
+    width: 350px;
+    height: 350px; 
+    display: inline-block;
+    justify-content:space-around;
+    box-sizing: border-box;
+    text-align: center; 
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  min-height: 100vh;
+}
+
+.type {
+  width: 80px; 
+  height: 30px; 
+  font-size: 14px; 
+  margin-right: 8px;
+  border-radius: 8px;
 }
 
 
@@ -127,190 +123,223 @@ h2{
     height: 200px;
 }
 
+.type.standard-button{
+  padding: 8px 16px;
+  margin-right: 8px; 
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
 .grama {
-    display: inline;
-    padding: 8px;
-    border-radius: 15px;
     border-color: #7dc500;
     background-color: #7dc500;
     color: black;
-    margin-right: 4px;
+
 }
 
 .veneno {
-    background-color: #FFD700; /* Amarelo para tipo elétrico */
+    background-color: #FFD700; 
     color: black;
     border:#FFD700;
-    border-radius: 15px;
-    display: inline;
-    padding: 8px;
-    margin-right: 4px;
   }
 
 .elétrico{
-    background-color: #C2BB00; /* Amarelo para tipo elétrico */
+    background-color: #C2BB00; 
     color: black;
     border:#C2BB00;
-    border-radius: 15px;
-    display: inline;
-    padding: 8px;
-    margin-right: 4px;
 }
   
 .fogo {
-    background-color: #FF4500; /* Vermelho para tipo fogo */
+    background-color: #FF4500;
     color: white;
     border:#FF4500;
-    border-radius: 15px;
-    display: inline;
-    padding: 8px;
   }
   
 .normal {
     background-color: #A6035D; 
     color: white;
-    border-radius: 15px;
     border:#A6035D;
-    display: inline;
-    padding: 8px;
+ 
   }
 
-.terra {
-    background-color: #8B4513; /* Marrom para fraqueza ao tipo chão */
+.terra{
+    background-color: #8B4513; 
     color: white;
-    border-radius: 15px;
     border:#8B4513;
-    display: inline;
-    padding: 8px;
   }
   
 .voo {
-    background-color: #F4E2DE; /* Azul para fraqueza ao tipo água */
-    border-radius: 15px;
+    background-color: #F4E2DE;
     border:#F4E2DE;
     color: black;
-    display: inline;
-    padding: 8px;
+
   }
 
 .inseto{
-    background-color: #007172; /* Azul para fraqueza ao tipo água */
-    border-radius: 15px;
+    background-color: #007172;
     border:#007172;
     color: white;
-    display: inline;
-    padding: 8px;
 }
 
 .psíquico{
-    background-color: #FF1493; /* Azul para fraqueza ao tipo água */
-    border-radius: 15px;
+    background-color: #FF1493;
     border:#FF1493;
     color: white;
-    display: inline;
-    padding: 8px;
+
 }
 
- .gelo{
-    background-color: #184C78; /* Azul para fraqueza ao tipo água */
-    border-radius: 15px;
+.gelo{
+    background-color: #184C78; 
     border:#184C78;
     color: white;
-    display: inline;
-    padding: 8px; /* Azul para fraqueza ao tipo água */
-
 }
 
 .rocha, .pedra{
-    background-color: #818274; /* Marrom para fraqueza ao tipo chão */
+    background-color: #818274; 
     color: white;
-    border-radius: 15px;
     border:#818274;
-    display: inline;
-    padding: 8px;
 }
 
 .água{
-    background-color: #0099DD; /* Marrom para fraqueza ao tipo chão */
+    background-color: #0099DD; 
     color: black;
-    border-radius: 15px;
     border:#0099DD;
-    display: inline;
-    padding: 8px;
+}
+
+.weakness.standard-button{
+  padding: 8px 16px;
+  margin-right: 8px; 
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.weakness-button.terra {
+  background-color: #8B4513;
+  color: white;
+  border: #8B4513;
+}
+
+.weakness-button.fogo {
+  background-color: #FF4500;
+  color: white;
+  border: #FF4500;
+}
+
+.weakness-button.elétrico {
+  background-color: #C2BB00; 
+  color: black;
+  border: #C2BB00;
+}
+
+.fantasmas {
+  background-color: #fafcd4;
+  color: black;
+  border: #fafcd4;
+}
+
+.sombrio {
+  background-color: #6f7246;
+  color: black;
+  border: #6f7246;
+}
+
+.lutador {
+  background-color:#202020;
+  color: white;
+  border: #202020;
+}
+
+.chão{
+  background-color:#e1e2ba;
+  color: black;
+  border: #e1e2ba;
+ 
+}
+
+.ability.standard-button {
+  padding: 8px 16px;
+  margin-right: 8px; 
+  border-radius: 8px;
+  border:none;
+  background-color: #ce90ca;
+  margin-bottom: 8px;
 }
   
 .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-  }
-  
-  .content-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.content-container {
     padding: 20px;
     background-color: white;
-    border: 1px solid #ccc;
+    border: 6px solid #4B4453;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    color: black;
+    font-family: 'Raleway', sans-serif;
     max-width: 800px;
     width: 90%;
-    border-radius: 8px;
+    border-radius: 10px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .fecharModal {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #e74c3c;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .fecharModal:hover {
-    background-color: #c0392b;
-  }
-/* Estilos para a barra de progresso (classe .progress-bar) */
+    max-height: 90vh; /* Define a altura máxima do modal em 90% da altura da viewport */
+    overflow-y: auto; /* Adiciona rolagem vertical quando o conteúdo excede a altura do modal */
+}
+
+
+.fecharModal {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.fecharModal:hover {
+  background-color: #c0392b;
+}
+
 .progress-bar {
-    width: 100%;
-    height: 10px;
-    background-color: #ccc;
-    border-radius: 5px;
-    margin-top: 5px;
-  }
+  width: 100%;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.progress {
+  height: 100%;
+  background-color: #29A632;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
   
-  /* Estilos para o preenchimento da barra de progresso (classe .progress) */
-  .progress {
-    height: 100%;
-    background-color: #29A632;
-    border-radius: 5px;
-    transition: width 0.3s ease-in-out; /* Adicione uma transição suave para a largura da barra */
-  }
-  
-  
-  .pokemon-details {
+.pokemon-details {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
+}
   
-  .pokemon-image img {
+.pokemon-image img {
     max-width: 200px;
     height: auto;
     display: flex;
-  }
+}
   
-  .pokemon-info {
+.pokemon-info {
     flex-grow: 1;
     padding: 20px;
   }

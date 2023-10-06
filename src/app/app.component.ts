@@ -11,29 +11,28 @@ export class AppComponent {
   title = 'Pokedex';
   logo = "https://1000marcas.net/wp-content/uploads/2020/01/Pok%C3%A9mon.jpg";
   imgProfile: string = "https://static.vecteezy.com/ti/vetor-gratis/p1/5005840-user-icon-in-trendy-flat-style-isolated-on-gray-background-user-symbol-for-your-web-site-design-logo-app-ui-vector-illustration-eps10-gratis-vetor.jpg";
-  links: string[] = ['Home', 'Pokedex', 'Video Game', 'Card Games', 'Eventos'];
+
 
 
   pokemons: Pokemon[] = [
-    new Pokemon(1, 'PIKACHU', ['Elétrico'],'Rato elétrico conhecido por sua fofura.','https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png',35,55,40,50,90,6.0, ['Chão'],['Static', 'Lightning Rod']),
-    new Pokemon(2, 'BULBASAUR',  ['Grama', 'Veneno'],'Possui uma planta brotando em seu dorso.','https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png',45,49,49,65,45,6.9,['Fogo', 'Psíquico', 'Voo', 'Gelo'],['Overgrow']),
-    new Pokemon(3, 'IVYSAUR', ['Grama','Veneno'],'Possui um botão de flor em sua planta.','https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png',60,62,63,80,60,13.0,['Fogo', 'Psíquico', 'Gelo'],['Overgrow']),
-    new Pokemon(4, 'CHARMANDER', ['Fogo'], 'Possui uma chama na ponta da cauda.','https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png',39, 52,43,50,65,8.5,['Água', 'Terra', 'Pedra'],['Blaze']),
-    new Pokemon(5, 'CHARMELEON', ['Fogo'],'Sua chama na cauda brilha mais forte.','https://assets.pokemon.com/assets/cms2/img/pokedex/full/005.png',58,64,58,65,80,19.0,['Água', 'Terra', 'Pedra'],['Blaze']),
-    new Pokemon(6, 'SQUIRTLE', ['Água'],'Pode disparar água de seu casco.','https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png',44,48,65,50,43,9.0,['Elétrico', 'Grama'],['Torrent']),
-    new Pokemon(7, 'CATERPIE', ['Inseto'],'Fácil de capturar, mas muito fraco.','https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png',45,30,35,45,55,2.9,['Fogo', 'Voo', 'Rocha'],['Shield Dust']),
-    new Pokemon(8, 'BUTTERFREE', ['Inseto', 'Voo'],'As asas são cobertas por pó brilhante.','https://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png',60,45,50,80,70,32.0,['Fogo', 'Voo', 'Elétrico', 'Gelo', 'Rocha'],['Compound Eyes']),
-    new Pokemon(9, 'PIDGEY', ['Normal', 'Voo'],'Um Pokémon pássaro comum.','https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png',40,45,40,35,56,1.8,['Elétrico', 'Gelo', 'Rocha'],['Keen Eye', 'Tangled Feet']),
-    new Pokemon(10, 'RATTATA', ['Normal'],'Um roedor noturno muito rápido.','https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png',30,56,35,25,72,3.5,['Lutador', 'Inseto'],['Run Away', 'Guts']),
-    new Pokemon(11, 'NIDOQUEEN', ['Veneno', 'Terra'],'A Rainha Venenosa do Nido.','https://assets.pokemon.com/assets/cms2/img/pokedex/full/031.png',90,82,87,76,75,60.0,['Água', 'Psíquico', 'Gelo', 'Elétrico', 'Terra'],['Poison Point', 'Rivalry']),
-    new Pokemon(12, 'BELLSPROUT', ['Grama', 'Veneno'],'Usa seu aroma para atrair presas.','https://assets.pokemon.com/assets/cms2/img/pokedex/full/069.png',50,75,35,70,40,4.0,['Fogo', 'Voo', 'Gelo', 'Psíquico'],['Chlorophyll']),
-    new Pokemon(13, 'DROWZEE',['Psíquico'],'Induz o sono com ondas cerebrais.','https://assets.pokemon.com/assets/cms2/img/pokedex/full/096.png',60,48,45,42,42,32.4,['Fantasma', 'Sombrio'],['Insomnia', 'Forewarn']),
-    new Pokemon(14,'PARAS',['Inseto', 'Grama'],'Usa seus esporos para controlar outros Pokémon e atacar.','https://assets.pokemon.com/assets/cms2/img/pokedex/full/046.png',100,35,70,55,80,5.4,['Fogo', 'Voo', 'Pedra'], ['Effect Spore', 'Dry Skin', 'Damp']),
-    new Pokemon(15,'NINETALES',['Fogo'],'Tem a capacidade de criar e controlar o fogo com sua cauda.','https://assets.pokemon.com/assets/cms2/img/pokedex/full/038.png',100,50,45,75,75,19.9,['Água', 'Terra', 'Rocha'], ['Flash Fire', 'Drought', 'Snow Warning'])
+    new Pokemon({ id: 1, name: 'PIKACHU', type: ['Elétrico'], description: 'Rato elétrico conhecido por sua fofura.', photo: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png', healthPoints: 35, attackPower: 55, defense: 40, specialDefense: 50, speed: 90, weight: 6, weaknesses: ['Chão'], abilities: ['Estática', 'Raio de Eletricidade'] }),
+    new Pokemon({ id: 2, name: 'BULBASAUR', type: ['Grama', 'Veneno'], description: 'Possui uma planta brotando em seu dorso.', photo: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png', healthPoints: 45, attackPower: 49, defense: 49, specialDefense: 65, speed: 45, weight: 6.9, weaknesses: ['Fogo', 'Psíquico', 'Voo', 'Gelo'], abilities: ['Super Crescimento'] }),
+    new Pokemon({ id: 3, name: 'IVYSAUR', type: ['Grama', 'Veneno'], description: 'Possui um botão de flor em sua planta.', photo: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png', healthPoints: 60, attackPower: 62, defense: 63, specialDefense: 80, speed: 60, weight: 13, weaknesses: ['Fogo', 'Psíquico', 'Gelo'], abilities: ['Super Crescimento'] }),
+    new Pokemon({ id: 4, name: 'CHARMANDER', type: ['Fogo'], description: 'Possui uma chama na ponta da cauda.', photo: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png', healthPoints: 39, attackPower: 52, defense: 43, specialDefense: 50, speed: 65, weight: 8.5, weaknesses: ['Água', 'Terra', 'Pedra'], abilities: ['Brasas'] }),
+    new Pokemon({ id: 5, name: 'CHARMELEON', type: ['Fogo'], description: 'Sua chama na cauda brilha mais forte.', photo: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/005.png', healthPoints: 58, attackPower: 64, defense: 58, specialDefense: 65, speed: 80, weight: 19, weaknesses: ['Água', 'Terra', 'Pedra'], abilities: ['Brasas'] }),
+    new Pokemon({ id: 6, name: 'SQUIRTLE', type: ['Água'], description: 'Pode disparar água de seu casco.', photo: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png', healthPoints: 44, attackPower: 48, defense: 65, specialDefense: 50, speed: 43, weight: 9, weaknesses: ['Elétrico', 'Grama'], abilities: ['Torrente'] }),
+    new Pokemon({ id: 7, name: 'CATERPIE', type: ['Inseto'], description: 'Fácil de capturar, mas muito fraco.', photo: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png', healthPoints: 45, attackPower: 30, defense: 35, specialDefense: 45, speed: 55, weight: 2.9, weaknesses: ['Fogo', 'Voo', 'Rocha'], abilities: ['Poeira de Escudo'] }),
+    new Pokemon({ id: 8, name: 'BUTTERFREE', type: ['Inseto', 'Voo'], description: 'As asas são cobertas por pó brilhante.', photo: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png', healthPoints: 60, attackPower: 45, defense: 50, specialDefense: 80, speed: 70, weight: 32, weaknesses: ['Fogo', 'Voo', 'Elétrico', 'Gelo', 'Rocha'], abilities:['Olhos Compostos']}),
+    new Pokemon({ id: 9, name: 'PIDGEY', type: ['Normal', 'Voo'], description: 'Um Pokémon pássaro comum.', photo: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png', healthPoints: 40, attackPower: 45, defense: 40, specialDefense: 35, speed: 56, weight: 1.8, weaknesses: ['Elétrico', 'Gelo', 'Rocha'], abilities: ['Olho Vivo', 'Pés Embolados']}),
+    new Pokemon({ id: 10, name: 'RATTATA', type: ['Normal'], description: 'Um roedor noturno muito rápido.', photo: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png', healthPoints: 30, attackPower: 56, defense: 35, specialDefense: 25, speed: 72, weight: 3.5, weaknesses: ['Lutador', 'Inseto'], abilities: ['Fugir', 'Vísceras']}),
+    new Pokemon({ id: 11, name: 'NIDOQUEEN', type: ['Veneno', 'Terra'], description: 'A Rainha Venenosa do Nido.', photo: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/031.png', healthPoints: 90, attackPower: 82, defense: 87, specialDefense: 76, speed: 75, weight: 60, weaknesses: ['Água', 'Psíquico', 'Gelo', 'Elétrico', 'Terra'], abilities: ['Pontos de Veneno', 'Rivalidade'] }),
+    new Pokemon({ id: 12, name: 'BELLSPROUT', type: ['Grama', 'Veneno'], description: 'Usa seu aroma para atrair presas.', photo: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/069.png', healthPoints: 50, attackPower: 75, defense: 35, specialDefense: 70, speed: 40, weight: 4, weaknesses: ['Fogo', 'Voo', 'Gelo', 'Psíquico'], abilities: ['Clorofila'] }),
+    new Pokemon({ id: 13, name: 'DROWZEE', type: ['Psíquico'], description: 'Induz o sono com ondas cerebrais.', photo: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/096.png', healthPoints: 60, attackPower: 48, defense: 45, specialDefense: 42, speed: 42, weight: 32.4, weaknesses: ['Fantasmas', 'Sombrio'], abilities: ['Insônia', 'Presságio'] }),
+    new Pokemon({ id: 14, name: 'PARAS', type: ['Inseto', 'Grama'], description: 'Usa seus esporos para controlar outros Pokémon e atacar.', photo: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/046.png', healthPoints: 100, attackPower: 35, defense: 70, specialDefense: 55, speed: 80, weight: 5.4, weaknesses: ['Fogo', 'Voo', 'Pedra'], abilities: ['Efeito Esporo', 'Pelego Seco', 'Umidade'] }),
+    new Pokemon({ id: 15, name: 'NINETALES', type: ['Fogo'], description: 'Tem a capacidade de criar e controlar o fogo com sua cauda.', photo: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/038.png', healthPoints: 100, attackPower: 50, defense: 45, specialDefense: 75, speed: 75, weight: 19.9, weaknesses: ['Água', 'Terra', 'Rocha'], abilities: ['Fogo Flash', 'Seca', 'Alerta de Neve'] })
 
     ];
     
-
     selectedPokemon?: Pokemon;
 
     showDetails(pokemon: Pokemon){
@@ -50,4 +49,5 @@ export class AppComponent {
       }
       return this.pokemons.filter (pokemon => pokemon.name.toLowerCase().includes(this.filterValue.toLowerCase()));
     }
+
   }

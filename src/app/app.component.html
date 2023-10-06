@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokedex</title>
+</head>
+<body>
+
 <nav>
   <img class="logo" src="https://1000marcas.net/wp-content/uploads/2020/01/Pok%C3%A9mon.jpg" alt="logo pokemon">
   <img class="imgProfile" [src]="imgProfile" alt="Imagem de Perfil">
@@ -11,8 +20,10 @@
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 
+
 <main>
-  <section>
+
+  <section class="card-container">
     <ul>
       <li class="cardPokemon" *ngFor="let pokemon of filteredPokemons()" (click)="showDetails(pokemon)">
         <img class="photoPokemon" [src]="pokemon.photo" alt="">
@@ -21,7 +32,7 @@
           <button class="type" *ngFor="let type of pokemon.type" [ngClass]="type.toLowerCase()">{{ type }}</button>
         </div>
       </li>
-    </ul>      
+    </ul>
   </section>
 
   <div *ngIf="selectedPokemon" class="modal" [ngClass]="selectedPokemon.type.join(' ').toLowerCase()">
@@ -30,18 +41,24 @@
         <div class="pokemon-image-center">
           <img [src]="selectedPokemon.photo" alt="{{ selectedPokemon.name }}">
         </div>
+        
         <div class="pokemon-info">
           <h2>{{ selectedPokemon.name }}</h2>
+          <p>{{ selectedPokemon.description }}</p>
           <div class="attributes">
-            <p><strong>Tipo(s):</strong></p>
+
             <div class="type-buttons">
-              <button class="type" *ngFor="let type of selectedPokemon.type" [ngClass]="type.toLowerCase()">{{ type }}</button>
+              <button class="type standard-button" *ngFor="let type of selectedPokemon.type" [ngClass]="type.toLowerCase()">{{ type }}</button>
             </div>
+            
             <p><strong>Peso:</strong> {{ selectedPokemon.weight }}</p>
-            <p><strong>Fraquezas:</strong></p>
+           
             <div class="weaknesses">
-              <button class="weakness" *ngFor="let weakness of selectedPokemon.weaknesses">{{ weakness }}</button>
+              <p><strong>Fraquezas:</strong></p>
+              <button class="weakness standard-button" *ngFor="let weakness of selectedPokemon.weaknesses" [ngClass]="weakness.toLowerCase()">{{ weakness }}</button>
             </div>
+            
+            
             <p><strong>Poder de Ataque:</strong> {{ selectedPokemon.attackPower }}</p>
             <div class="progress-bar">
               <div class="progress" [style.width.%]="(selectedPokemon.attackPower / 100) * 100"></div>
@@ -58,10 +75,12 @@
             <div class="progress-bar">
               <div class="progress" [style.width.%]="(selectedPokemon.speed / 100) * 100"></div>
             </div>
-            <p><strong>Habilidades:</strong></p>
+
             <div class="abilities">
-              <button class="ability" *ngFor="let ability of selectedPokemon.abilities">{{ ability }}</button>
+              <p><strong>Habilidades:</strong></p>
+              <button class="ability standard-button" *ngFor="let ability of selectedPokemon.abilities">{{ ability }}</button>
             </div>
+            
           </div>
         </div>
       </div>
@@ -70,3 +89,5 @@
   </div>
   
 </main>
+</body>
+</html>

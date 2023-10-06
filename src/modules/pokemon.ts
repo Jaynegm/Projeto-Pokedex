@@ -14,20 +14,8 @@ export class Pokemon {
     abilities: string[];
 
     constructor( 
-    id: number,
-    name: string,
-    type: string[],
-    description: string,
-    photo: string,
-    healthPoints: number,
-    attackPower: number,
-    defense: number,
-    specialDefense: number,
-    speed: number,
-    weight: number,
-    weaknesses: string[],
-abilities: string[]
-      ) {
+{ id, name, type, description, photo, healthPoints, attackPower, defense, specialDefense, speed, weight, weaknesses, abilities }: 
+{ id: number; name: string; type: string[]; description: string; photo: string; healthPoints: number; attackPower: number; defense: number; specialDefense: number; speed: number; weight: number; weaknesses: string[]; abilities: string[]; }      ) {
 
         this.id = id;
         this.name = name;
